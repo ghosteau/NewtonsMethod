@@ -42,11 +42,10 @@ def newton_method(input_function, x0, iterations):
 
     return new_x
 
+
 new_func = input("Input your function in terms of x -- be aware of how to write different operations: ")
 new_func = init_function(new_func)
 init_guess = input("What value would you like the algorithm to start with? (this is x-sub-zero): ")
-init_guess = int(init_guess)
 init_iterations = input("How many iterations do you want to run? More iterations tend to be more accurate: ")
-init_iterations = int(init_iterations)
 
-print("Approximated zero at: " + str(newton_method(new_func, init_guess, init_iterations)))
+print("Approximated zero at: " + str(newton_method(new_func, float(init_guess), int(init_iterations))))
