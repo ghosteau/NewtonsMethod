@@ -1,5 +1,5 @@
 # Newton's Method
-This is a Python file that can approximate the root of any function using Newton's method for approximating
+This is a Python file that can approximate the root of any function using Newton's method for approximating.
 
 This small project uses a cool mathematics library called SymPy, something I highly recommend checking out if you are into mathematics. 
 
