@@ -1,10 +1,6 @@
 import sympy
 from sympy import *
 from sympy.calculus.util import continuous_domain
-import math
-
-# The code will break if you do not initialize your symbol (variable) and function beforehand.
-
 def init_symbol(input_variable):
     if input_variable != str(input_variable):
         raise Exception("Must input string to initialize symbol")
@@ -44,10 +40,13 @@ def newton_method(input_function, x0, iterations):
 
     return new_x
 
+initialize_var = input("Enter what variable you are going to use for your function (must be a string/character): ")
+init_symbol(initialize_var)
+new_func = input("Input your function -- be aware of how to write different operations: ")
+new_func = init_function(new_func)
+init_guess = input("What value would you like the algorithm to start with? (this is x-sub-zero): ")
+init_guess = int(init_guess)
+init_iterations = input("How many iterations do you want to run? More iterations tend to be more accurate: ")
+init_iterations = int(init_iterations)
 
-x = init_symbol("x")
-
-# More iterations will generally lead to more accuracy; be weary of multiple zeroes.
-new_func = init_function("x**3 + 3*x**2 + 5")
-print(newton_method(new_func, 2, 100))
-
+print(newton_method(new_func, init_guess, init_iterations))
