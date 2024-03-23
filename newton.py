@@ -42,7 +42,6 @@ def newton_method(input_function, x0, iterations):
 
     return new_x
 
-init_symbol("x")
 new_func = input("Input your function in terms of x -- be aware of how to write different operations: ")
 new_func = init_function(new_func)
 init_guess = input("What value would you like the algorithm to start with? (this is x-sub-zero): ")
