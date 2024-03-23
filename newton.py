@@ -14,17 +14,17 @@ def init_function(input_function):
     return expression
 
 def domain(input_function):
-    x = symbols("x")
+    x = init_symbol("x")
     domain = continuous_domain(input_function, x, sympy.Reals)
     return domain
 
 def find_undefined(input_function):
-    x = symbols("x")
+    x = init_symbol("x")
     domain = continuous_domain(input_function, x, sympy.Reals)
     return Complement(sympy.Reals, domain)
 
 def newton_method(input_function, x0, iterations):
-    x = symbols("x")
+    x = init_symbol("x")
     function_prime = input_function.diff(x)
 
     if x0 not in domain(input_function):
