@@ -50,4 +50,4 @@ init_guess = int(init_guess)
 init_iterations = input("How many iterations do you want to run? More iterations tend to be more accurate: ")
 init_iterations = int(init_iterations)
 
-print(newton_method(new_func, init_guess, init_iterations))
+print("Approximated zero at: " + str(newton_method(new_func, init_guess, init_iterations)))
