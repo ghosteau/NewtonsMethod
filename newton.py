@@ -28,7 +28,8 @@ def newton_method(input_function, x0, iterations):
     function_prime = input_function.diff(x)
 
     if x0 not in domain(input_function):
-        raise ValueError("x0 is not in the domain of the function; try another value")
+        x0 = input("X0 was not in the domain, try another value: ")
+        x0 = float(x0)
 
     for iterate in range(iterations):
         evaluated_prime = function_prime.evalf(subs={x: x0})
